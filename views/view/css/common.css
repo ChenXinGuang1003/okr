@@ -1,0 +1,425 @@
+@charset "utf-8";
+@font-face {font-family: "iconfont";
+  src:url('iconfont.woff?t=1480605416690') format('woff');
+}
+
+.iconfont,.icon-iconfonterror,.icon-zuojiantou,.icon-jiantouyou,.icon-xin,.icon-xiaoxi,.icon-wo,.icon-zan-copy,.icon-zl_lianxiren{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfonterror:before { content: "\e623"; }
+.icon-zuojiantou:before { content: "\e63f"; }
+.icon-jiantouyou:before { content: "\e643"; }
+.icon-xin:before { content: "\eb52";
+padding-right:5px;
+font-size:.32rem;}
+.icon-xiaoxi:before { 
+  content: "\e679";
+  position: absolute;
+  top: 0;
+  left:50%;
+  margin-left: -.2rem;
+  font-size: .46rem; }
+.icon-wo:before { content: "\e705";position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.24rem;
+    font-size: .46rem; }
+.icon-zan-copy:before { content: "\e604"; 
+  padding-right: 3px;
+font-size:.32rem;}
+.icon-zl_lianxiren:before {    content: "\e640";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.31rem;
+    font-size: .46rem;}
+/*img{border:none;  vertical-align:middle; width:100%;}*/
+.icon-zan{
+  font-weight: normal;
+  float:right;
+  color:#6c6c6c;
+  font-size: .32rem;
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+header,
+ul,
+li,
+dl,
+dt,
+dd,
+ol,
+nav,
+input,
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ededf0;
+  overflow-x: hidden;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 10px/1.5 Microsoft Yahei, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+}
+img{
+      vertical-align: middle;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+g-block {
+  display: block;
+}
+
+ol,
+ul,
+li {
+  list-style: outside none none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: none;
+
+}
+
+:focus {
+  outline: 0;
+}
+
+
+/*去掉iPhone上的默认圆角样式*/
+
+input {
+  -webkit-appearance: none;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  -webkit-appearance: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+}
+
+
+/*去出选中时高亮*/
+
+img,
+a,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+::selection {
+  background: none;
+}
+
+::-moz-selection {
+  background: none;
+}
+
+::-webkit-selection {
+  background: none;
+}
+
+
+/*隐藏bady滚动条*/
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*清除浮动*/
+.clearfix:after {
+  content: "\200B";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+
+/*实用类*/
+.otl {
+  outline: 1px solid red;
+}
+
+.dp-n {
+  display: none;
+}
+
+.dp-b {
+  display: block;
+}
+.vh{
+  visibility: hidden;
+}
+/*ab-f 全屏*/
+.ab-f {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+/*ab-c 居中*/
+.ab-c {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.op0 {
+  opacity: 0
+}
+
+.selectAvailable {
+  -webkit-tap-highlight-color: rgba(231, 105, 105, 0.7);
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+}
+
+.selectAvailable::selection {
+  background: rgba(231, 105, 105, 0.7);
+}
+
+.selectAvailable::-webkit-selection {
+  background: rgba(231, 105, 105, 0.7);
+}
+.g-bdtm{
+  border-bottom:1px solid #e8e9eb;
+}
+.pdb1{
+  padding-bottom:.1rem;
+}
+.dn{
+  display: none;
+}
+.main{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #ededf0;
+}
+/*header start*/
+.header{
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 10;
+  width:100%;
+  height:.9rem;
+  line-height:.9rem;
+  font-size:.32rem;
+  font-weight: bold;
+  color:#000000;
+  text-align: center;
+  background:#ffffff;
+
+  border-bottom:1px solid #e4e6eb;
+
+}
+.btn-back-sub{
+  margin-right:.04rem;
+  font-size: .4rem;
+}
+.btn-back{
+  position: absolute;
+  left:0;
+  margin-left:8px;
+  color:#5c6166;
+  font-size:.28rem;
+  font-weight: normal;
+
+}
+.mb05{
+  margin-bottom:.1rem;
+}
+.mb1{
+  margin-bottom:.2rem;
+}
+.g-mb14{
+  margin-bottom:.28rem;
+}
+.g-mb2{
+  margin-bottom: .4rem;
+}
+.g-hr{
+  border-bottom:1px solid #aaadb3;
+}
+
+/*grade*/
+.grade-time-info{
+    color: #5c6166;
+    display: inline-block;
+    background: url(../img/icon-data.png) no-repeat;
+    background-size: 100% 100%;
+    width: .42rem;
+    height: .42rem;
+    vertical-align: -.08rem;
+}
+.grade-cont{
+  background: #ffffff;
+  padding-left:.3rem;
+  border-bottom:1px solid #e8e9eb;
+  /*margin-bottom:.3rem;*/
+  /*padding-bottom:.12rem;*/
+}
+.grade-title{
+  height:.58rem;
+  padding:.32rem .4rem 0 0;
+  font-size:.32rem;
+}
+.grade-title span{
+  font-weight: normal;
+  padding-right:.18rem;
+}
+.grade-li{
+  height:.78rem;
+  line-height: .78rem;
+  display: -webkit-box;
+}
+.grade-left{
+  -webkit-box-flex:   1;
+  -moz-box-flex:  1;
+  -ms-box-flex:   1;
+  box-flex:   1;
+}
+.icon-info{
+  background: url(../img/icon-info.png) no-repeat;
+  background-size:100% 100%;
+  display: inline-block;
+  width:.32rem;
+  height:.32rem;
+  margin-right:.14rem;
+  vertical-align: -.08rem;
+}
+.grade-kr{
+  color:#000000;
+  font-weight: bold;
+  font-size:.2rem;
+}
+.grade-kr-text{
+  font-size:.26rem;
+  color:#363c4c;
+}
+.grade-rigth{
+  color:#9b9898;
+  padding-right:.4rem;
+  font-size: .2rem;
+}
+.grade-rigth-input{
+  border:1px solid #9b9898;
+    width: .96rem;
+    height: .44rem;
+  border-radius: 3px;
+  margin-left:4px;
+  text-align: center;
+}
+
+/*appraiseList*/
+.lists{
+  background: #ffffff;
+  padding:.3rem;
+  font-size:.28rem;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+.lists .list-img{
+  width:.76rem;
+  height:.76rem;
+  line-height: .76rem;
+  display: inline-block;
+  text-align: center;
+  /*-webkit-border-radius:3px;*/
+  font-size:.26rem;
+  color:#ffffff;
+  margin-right:.2rem;
+  overflow: hidden;
+  float: left;
+}
+.lists .list-name{
+  color:#000000;
+  line-height: .76rem;
+}
+
+
+.go-right {
+    position: absolute;
+    right: .3rem;
+    top: 50%;
+    margin-top: -0.13rem;
+    font-size: .26rem;
+    color: #c7cdd1;
+}
+
+.color1{
+  background: #ce88f8;
+}
+.color2{
+  background: #21bb42;
+}
+.color3{
+  background: #419cd6;
+}

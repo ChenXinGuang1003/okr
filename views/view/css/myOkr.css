@@ -1,0 +1,59 @@
+@charset "utf-8";
+.header{
+  height:.932rem;
+}
+.main{
+    padding-top: 1.032rem;
+}
+.ul-cont{
+  height: 1.3rem;
+  padding-top: .3rem;
+  background: #ffffff;
+
+}
+.ul-cont .ul-li{
+  position: relative;
+}
+.dd-title{
+  font-size:.3rem;
+  line-height:.46rem;
+  color:#030303;
+  padding-left:.3rem;
+}
+.dd-p{
+  font-size:.26rem;
+  line-height: .52rem;
+  color:#afb2b8;
+  padding-left:.3rem;
+  padding-bottom:.3rem;
+}
+.hint{
+  font-weight: normal;
+  color:#f11841;
+}
+.text-gay{
+  color:#363c4c;
+}
+.g-border{
+  border-top:1px solid #e8e9eb;
+  height:1px;
+}
+.li-right-cont{
+  position: absolute;
+  right:.24rem;
+  top:0;
+  text-align: right;
+
+}
+.grade-cont{
+  color:#686666;
+  font-size: .2rem;
+}
+.heart{
+  bottom:.26rem;
+  font-size:.3rem;
+  /*line-height: .76rem;*/
+  color:#aaadb3;
+}
+
+
