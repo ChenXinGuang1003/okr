@@ -75,7 +75,7 @@ body {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
   background: #ededf0;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 body,
@@ -261,6 +261,7 @@ div {
     top: 0;
     right: 0;
     background: #ededf0;
+    overflow-x: hidden;
 }
 /*header start*/
 .header{

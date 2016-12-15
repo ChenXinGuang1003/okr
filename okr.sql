@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-12-10 17:35:44
+Date: 2016-12-15 16:30:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `concern` (
   `user_id` varchar(12) NOT NULL,
   `concern_id` varchar(12) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户与关注用户表';
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='订阅';
 
 -- ----------------------------
 -- Records of concern
@@ -33,71 +33,89 @@ INSERT INTO `concern` VALUES ('1', '1', '2');
 INSERT INTO `concern` VALUES ('2', '1', '3');
 
 -- ----------------------------
--- Table structure for kr_info
+-- Table structure for kr
 -- ----------------------------
-DROP TABLE IF EXISTS `kr_info`;
-CREATE TABLE `kr_info` (
-  `kr_info_id` int(11) NOT NULL AUTO_INCREMENT,
-  `kr_info_title` text NOT NULL,
-  `kr_id` int(11) NOT NULL,
-  PRIMARY KEY (`kr_info_id`)
+DROP TABLE IF EXISTS `kr`;
+CREATE TABLE `kr` (
+  `kr_id` int(11) NOT NULL AUTO_INCREMENT,
+  `kr_title` text NOT NULL,
+  `object_id` int(11) NOT NULL,
+  PRIMARY KEY (`kr_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of kr_info
+-- Records of kr
 -- ----------------------------
-INSERT INTO `kr_info` VALUES ('1', '11.1日前上线第一版', '1');
-INSERT INTO `kr_info` VALUES ('2', '12.1日前第一版测试结束', '1');
-INSERT INTO `kr_info` VALUES ('3', '2.1日前上线第一版', '2');
-INSERT INTO `kr_info` VALUES ('4', '2.11日前第一版测试结束', '2');
-INSERT INTO `kr_info` VALUES ('5', '3.1日前上线第一版', '3');
-INSERT INTO `kr_info` VALUES ('6', '3.11日前第一版测试结束', '3');
-INSERT INTO `kr_info` VALUES ('7', '4.1日前上线第一版', '4');
-INSERT INTO `kr_info` VALUES ('8', '4.11日前第一版测试结束', '4');
-INSERT INTO `kr_info` VALUES ('9', '5.1日前上线第一版', '5');
-INSERT INTO `kr_info` VALUES ('10', '5.11日前第一版测试结束', '5');
-INSERT INTO `kr_info` VALUES ('11', '6.1日前上线第一版', '6');
-INSERT INTO `kr_info` VALUES ('12', '6.11日前第一版测试结束', '6');
+INSERT INTO `kr` VALUES ('1', 'object101', '1');
+INSERT INTO `kr` VALUES ('2', 'object102', '1');
+INSERT INTO `kr` VALUES ('3', 'object103', '1');
+INSERT INTO `kr` VALUES ('4', 'object201', '2');
+INSERT INTO `kr` VALUES ('5', 'object202', '2');
+INSERT INTO `kr` VALUES ('6', 'object203', '2');
+INSERT INTO `kr` VALUES ('7', 'object204', '2');
+INSERT INTO `kr` VALUES ('8', '发布101', '3');
+INSERT INTO `kr` VALUES ('9', '发布102', '3');
+INSERT INTO `kr` VALUES ('10', '发布103', '3');
+INSERT INTO `kr` VALUES ('11', '发布202', '4');
+INSERT INTO `kr` VALUES ('12', '发布201', '4');
 
 -- ----------------------------
--- Table structure for kr_list
+-- Table structure for objects
 -- ----------------------------
-DROP TABLE IF EXISTS `kr_list`;
-CREATE TABLE `kr_list` (
-  `kr_id` int(11) NOT NULL AUTO_INCREMENT,
-  `kr_title` text NOT NULL,
-  `o_id` int(11) NOT NULL,
-  PRIMARY KEY (`kr_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `objects`;
+CREATE TABLE `objects` (
+  `object_id` int(11) NOT NULL AUTO_INCREMENT,
+  `object_title` text NOT NULL,
+  `okr_id` int(11) NOT NULL,
+  PRIMARY KEY (`object_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of kr_list
+-- Records of objects
 -- ----------------------------
-INSERT INTO `kr_list` VALUES ('1', 'A项目顺利落地', '1');
-INSERT INTO `kr_list` VALUES ('2', 'B项目顺利落地', '1');
-INSERT INTO `kr_list` VALUES ('3', 'C项目顺利落地', '2');
-INSERT INTO `kr_list` VALUES ('4', 'd项目顺利落地', '2');
-INSERT INTO `kr_list` VALUES ('5', 'E项目顺利落地', '3');
-INSERT INTO `kr_list` VALUES ('6', 'F项目顺利落地', '3');
+INSERT INTO `objects` VALUES ('1', 'object1', '1');
+INSERT INTO `objects` VALUES ('2', 'object2', '1');
+INSERT INTO `objects` VALUES ('3', '发布1', '4');
+INSERT INTO `objects` VALUES ('4', '发布2', '4');
 
 -- ----------------------------
--- Table structure for o_list
+-- Table structure for object_zan
 -- ----------------------------
-DROP TABLE IF EXISTS `o_list`;
-CREATE TABLE `o_list` (
-  `0_id` int(11) NOT NULL AUTO_INCREMENT,
-  `o_title` text NOT NULL,
-  `o_date` datetime NOT NULL,
-  `o_owner` varchar(12) NOT NULL,
-  PRIMARY KEY (`0_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `object_zan`;
+CREATE TABLE `object_zan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `okr_id` int(11) NOT NULL,
+  `object_id` int(11) NOT NULL COMMENT 'kr的id编号',
+  `u_name` varchar(12) NOT NULL COMMENT '点赞人',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of o_list
+-- Records of object_zan
 -- ----------------------------
-INSERT INTO `o_list` VALUES ('1', '2016年10月-12月', '2016-12-10 11:26:22', 'admin');
-INSERT INTO `o_list` VALUES ('2', '2016年9月-11月', '2016-12-10 11:26:22', '2');
-INSERT INTO `o_list` VALUES ('3', '2016年5月-10月', '2016-12-10 11:26:22', '3');
+INSERT INTO `object_zan` VALUES ('1', '1', '1', 'A');
+INSERT INTO `object_zan` VALUES ('2', '1', '1', 'B');
+INSERT INTO `object_zan` VALUES ('3', '1', '2', 'C');
+INSERT INTO `object_zan` VALUES ('4', '1', '2', 'D');
+
+-- ----------------------------
+-- Table structure for okr
+-- ----------------------------
+DROP TABLE IF EXISTS `okr`;
+CREATE TABLE `okr` (
+  `okr_id` int(11) NOT NULL AUTO_INCREMENT,
+  `okr_title` text NOT NULL,
+  `okr_date` datetime NOT NULL,
+  `okr_owner` varchar(12) NOT NULL,
+  `is_public` varchar(1) NOT NULL,
+  PRIMARY KEY (`okr_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of okr
+-- ----------------------------
+INSERT INTO `okr` VALUES ('1', '2016年10月-12月', '2016-12-15 14:35:00', '1', '0');
+INSERT INTO `okr` VALUES ('4', '2016年10月-12月', '2016-12-15 16:13:59', '1', '1');
 
 -- ----------------------------
 -- Table structure for users

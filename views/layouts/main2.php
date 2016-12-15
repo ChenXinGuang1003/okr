@@ -1,5 +1,4 @@
 <?php
-use yii\helpers\Url;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 AppAsset::register($this);
@@ -35,16 +34,7 @@ AppAsset::register($this);
 <section class="main">
     <?php echo $content ?>
 </section>
-<footer class="footer">
-    <div class="tabs"><a href="<?= Url::to(['okr/index'])?>"><i class="f-icons icon-xiaoxi"></i><span>OKR</span></a></div>
-    <div class="tabs"><a href="<?= Url::to(['contact/index'])?>"><i class="f-icons icon-zl_lianxiren"></i><span>联系人</span></a></div>
-    <div class="tabs"><a href="<?= Url::to(['user/index'])?>"><i class="f-icons icon-wo"></i><span>我</span></a></div>
-</footer>
 
-
-<script>
-
-</script>
 <?php $this->endBody() ?>
 </body>
 

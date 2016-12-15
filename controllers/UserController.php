@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     public function actionIndex()
     {
-        $this->layout=false;
-        return $this->renderPartial('index');
+        $this->layout='main2';
+        return $this->render('index');
     }
 }

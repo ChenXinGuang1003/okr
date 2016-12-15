@@ -77,10 +77,13 @@
   font-size:.34rem;
 
 }
+.footer .tabs span{
+  font-size:.2rem;
+}
 .tabs-after{
   background: url(../img/tab-bg.png) no-repeat right center; 
 }
-
+/*footer*/
 .footer a{
   display: block;
   color:#797f8c;
@@ -90,6 +93,7 @@
   display: block;
   padding-top:.4rem;
   font-size:.2rem;
+  /*position: relative;*/
 }
 .content{
   padding-bottom: 1.06rem;

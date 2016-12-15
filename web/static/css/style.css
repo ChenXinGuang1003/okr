@@ -1,0 +1,106 @@
+html,body,div,ul,li,ol,a,input,textarea,p,dl,dt,dd{margin:0;padding:0;}
+ul li{list-style: none;}
+a{text-decoration: none;cursor: pointer;}
+html{height: 100%;}
+body{height: 100%;background: #f5f5f5;position: relative;font-family: '微软雅黑';margin:auto;}
+a,input,img,textarea,span,div{outline: 0;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+header{
+    width:100%;
+    height: 45px;
+    background: #ececea;
+    border-bottom: 1px solid #ddd;
+}
+header.fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.header{
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    font-size: .32rem;
+    font-weight: bold;
+}
+#letter{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    font-size: 75px;
+    color: #555;
+    text-align: center;
+    line-height: 100px;
+    background: rgba(145,145,145,0.6);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin:-50px 0px 0px -50px;
+    z-index: 99;
+    display: none;
+}
+#letter img{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin:25px 0px 0px 25px;
+}
+.sort_box{
+    width: 100%;
+    overflow: hidden;
+}
+.sort_list{
+    position: relative;
+    height:.76rem;
+    padding: .15rem 0 .15rem .24rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e3e5e6;
+}
+
+.sort_list .num_logo{
+    overflow: hidden;
+    position: absolute;
+}
+.sort_list .num_logo img{
+    width: .76rem;
+    height: .76rem;
+}
+.sort_list .num_name{
+    color: #000;
+    padding-left:1rem;
+    line-height:.76rem;
+    font-size:.28rem;
+}
+
+.sort_letter{
+    padding-left: .24rem;
+    height: .48rem;
+    line-height: .48rem;
+    font-size: .2rem;
+}
+.initials{
+    position: fixed;
+    top: 1.8rem;
+    right: 0px;
+    height: 100%;
+    padding-right: .18rem;
+    text-align: center;
+    font-size: 12px;
+    z-index: 99;
+    background: rgba(145,145,145,0);
+}
+.initials ul{
+    width: .44rem;
+    background: #ccc;
+border: 1px solid #e5e6e8;
+    border-radius: .22rem;
+    background: #f7f8fa;
+    padding: .22rem 0;
+}
+.initials ul li{
+    color: #525866;
+    font-size: .16rem;
+}
+.initials li img{
+    width: 14px;
+}
